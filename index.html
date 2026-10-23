@@ -1,22 +1,41 @@
-<!--Declaração da versão HTML5 para  o navegador -->
 <!DOCTYPE html>
-<!--Elemento raiz com definição do idioma -->
-<html lang="br">
-  <!--inicio da seção de configurações e metadados (não visivel na pagina) -->
-<head>
-  <!--Define a condificação para surporte correto a acentuação -->
-    <meta charset="UTF-8">
-    <!-- Configura a escola da tela para dispositivos móveis -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- T´tulo exibido na do aba do nevegador -->
-    <title>Document</title>
-</head>
-<body>
-  <h1> Olá mundo!
-    Hello World!
-  </h1>  
-  <p> Este é um paragrafo de </p>
-    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus nostrum reprehenderit labore, natus esse repellendus laudantium ab sequi minima odit totam odio nam id eos mollitia facilis quaerat provident veritatis. ipsum dolor sit amet, consectetur adipisicing elit. Sed debitis deleniti consequuntur possimus natus nam fuga doloribus ipsa reprehenderit est, laboriosam eos! Tempore veniam repellat aut dolores perferendis quaerat natus.
-  </p>
-</body>
-</html>
+<html lang="pt-BR">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exemplo Semântico</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <header>
+          <h1  class="cartão-status">Nome do Site</h1>
+          <nav>
+              <a href="#home">Início</a>
+              <a href="#blog">Blog</a>
+          </nav>
+      </header>
+
+      <main class="content">
+          <section id="blog">
+            <h2>Últimos Artigos</h2>
+                <article>
+                    <h3>Título da Postagem</h3>
+                    <p>Texto do primeiro parágrafo da publicação.</p>
+                </article>
+              <article class="cartão-perfil">
+                  <h2 class="cartão-título">Desenvoldor Back-end</h2>
+                  <p class="cartão-subtitulo">Texto do primeiro parágrafo da publicação.</p>
+                  <p class="cartão-conteudo">Com mais de 5 anos de Exemplo</p>
+                  <div class="cartão-status">Disponivel para projetos</div>
+              </article>
+              <article>
+
+              </article>
+          </section>
+      </main>
+
+      <footer>
+          <p>© 2026 Meu Site. Todos os direitos reservados.</p>
+      </footer>
+  </body>
+</html> 
