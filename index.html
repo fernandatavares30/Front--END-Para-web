@@ -1,49 +1,317 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Exemplo Semântico</title>
-      <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <img src="assets/27848066-lindo-leao-isolado-gratis-foto.jpg" alt="L" class="background-body">
-      <header>
-          <h1  class="cartão-status">Nome do Site</h1>
-          <nav>
-              <a href="#home">Início</a>
-              <a href="#blog">Blog</a>
-          </nav>
-      </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce da Fé | Bolos e doces artesanais</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
 
-      <main class="content">
-          <section id="blog">
-            <h2>Últimos Artigos</h2>
-                <article>
-                    <h3>Título da Postagem</h3>
-                    <p>Texto do primeiro parágrafo da publicação.</p>
-                </article>
-              <article class="cartão-perfil">
-                  <h2 class="cartão-título">Desenvoldor Back-end</h2>
-                  <p class="cartão-subtitulo">Texto do primeiro parágrafo da publicação.</p>
-                  <p class="cartão-conteudo">Com mais de 5 anos de Exemplo</p>
-                  <div class="cartão-status">Disponivel para projetos</div>
-              </article>
-              <article>
+    <header class="topo">
+        <a class="logo" href="#inicio">Doce da Fé</a>
 
-              </article>
-          </section>
-          <figure>
-            <img src="/assets/27848066-lindo-leao-isolado-gratis-foto.jpg" alt="Leão" width="500" height="300" loading="lazy">
-            <figcaption>Leão</figcaption>
-            </figure>
-<
+        <nav aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#precos">Preços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-          </figure>
-      </main>
+    <main>
+        <!-- Banner principal (Seção Início) -->
+        <section id="inicio" class="banner">
+            <div class="conteudo banner-conteudo">
 
-      <footer>
-          <p>© 2026 Meu Site. Todos os direitos reservados.</p>
-      </footer>
-  </body>
-</html> 
+                <div class="banner-texto">
+                    <h1>Bolos e doces feitos à mão, com carinho e dedicação</h1>
+
+                    <p>
+                        Encomende para o aniversário, o café da tarde
+                        ou aquele presente especial.
+                    </p>
+
+                    <a class="botao" href="#contato">Fale comigo</a>
+                </div>
+
+                <!-- Ilustração do bolo em SVG -->
+                <div class="banner-imagem">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 400 300"
+                        role="img"
+                        aria-labelledby="bolo-titulo bolo-descricao">
+
+                        <title id="bolo-titulo">Bolo artesanal com cereja</title>
+                        <desc id="bolo-descricao">
+                            Bolo de dois andares com cobertura de chocolate,
+                            confeitos e uma cereja, sobre um prato branco.
+                        </desc>
+
+                        <defs>
+                            <linearGradient id="massa" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#d99468"/>
+                                <stop offset="100%" stop-color="#bd7952"/>
+                            </linearGradient>
+
+                            <linearGradient id="chocolate" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#96315f"/>
+                                <stop offset="100%" stop-color="#76254c"/>
+                            </linearGradient>
+
+                            <radialGradient id="cereja" cx="30%" cy="25%" r="75%">
+                                <stop offset="0%" stop-color="#ff7882"/>
+                                <stop offset="55%" stop-color="#d6294b"/>
+                                <stop offset="100%" stop-color="#a8193a"/>
+                            </radialGradient>
+                        </defs>
+
+                        <!-- Formas decorativas ao fundo -->
+                        <circle cx="85" cy="78" r="38" fill="#f4cfbc"/>
+                        <circle cx="330" cy="220" r="48" fill="#f4cfbc"/>
+
+                        <!-- Prato -->
+                        <ellipse cx="200" cy="252" rx="155" ry="22" fill="#ffffff"/>
+                        <ellipse cx="200" cy="250" rx="130" ry="12" fill="#fffaf6"/>
+
+                        <!-- Base do bolo -->
+                        <rect x="96" y="158" width="208" height="90"
+                              rx="12" fill="url(#massa)"/>
+
+                        <!-- Cobertura da base -->
+                        <rect x="91" y="151" width="218" height="19"
+                              rx="9" fill="url(#chocolate)"/>
+
+                        <!-- Parte superior do bolo -->
+                        <rect x="119" y="108" width="162" height="53"
+                              rx="9" fill="#e8ae88"/>
+
+                        <!-- Cobertura superior -->
+                        <path d="M119 119 Q119 106 132 106 H268
+                                 Q281 106 281 119
+                                 Q281 132 270 132
+                                 Q260 132 260 143
+                                 Q260 151 250 151
+                                 Q240 151 240 140
+                                 Q240 132 229 132
+                                 Q219 132 219 143
+                                 Q219 151 209 151
+                                 Q199 151 199 140
+                                 Q199 132 189 132
+                                 Q179 132 179 143
+                                 Q179 151 169 151
+                                 Q159 151 159 140
+                                 Q159 132 149 132
+                                 Q139 132 139 143
+                                 Q139 151 129 151
+                                 Q119 151 119 139 Z"
+                              fill="url(#chocolate)"/>
+
+                        <!-- Confeitos -->
+                        <g stroke="#fff3e8" stroke-width="4" stroke-linecap="round">
+                            <path d="M151 116 l7 3"/>
+                            <path d="M185 115 l6 -2"/>
+                            <path d="M222 116 l7 2"/>
+                            <path d="M255 116 l6 -3"/>
+                        </g>
+
+                        <!-- Cabinho da cereja -->
+                        <path d="M200 77 Q199 54 221 48"
+                              fill="none" stroke="#527d3c"
+                              stroke-width="4" stroke-linecap="round"/>
+
+                        <!-- Cereja -->
+                        <circle cx="200" cy="83" r="16" fill="url(#cereja)"/>
+                        <ellipse cx="195" cy="77" rx="4" ry="6"
+                                 fill="#ffffff" opacity="0.65"/>
+
+                    </svg>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre">
+            <div class="conteudo">
+                <h2>Sobre mim</h2>
+                <p>
+                    Sou a Fernanda e faço doces há dez anos. Comecei vendendo
+                    para os vizinhos e hoje atendo festas e encomendas de toda
+                    a região. Uso ingredientes frescos e receitas da minha família.
+                </p>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section id="servicos">
+            <div class="conteudo">
+                <h2>O que eu faço</h2>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>Bolos de aniversário</h3>
+                        <p>
+                            Massa fofinha, recheio à sua escolha e decoração
+                            no tema da festa.
+                        </p>
+                        <p class="card-preco">A partir de R$ 58,00</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Doces para festa</h3>
+                        <p>
+                            Brigadeiros gourmet, beijinhos e cajuzinhos
+                            em caixas de 12 ou 50 unidades.
+                        </p>
+                        <p class="card-preco">A partir de R$ 36,00</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Sobremesas no pote</h3>
+                        <p>
+                            Porção individual, prática para levar.
+                            Sabores que mudam a cada semana.
+                        </p>
+                        <p class="card-preco">A partir de R$ 9,00</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preços -->
+        <section id="precos">
+            <div class="conteudo">
+                <h2>Tabela de preços</h2>
+
+                <div class="tabela-container">
+                    <table class="tabela">
+                        <caption>Valores dos produtos mais pedidos</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Produto</th>
+                                <th scope="col">Porção</th>
+                                <th scope="col">Preço</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Bolo caseiro</td>
+                                <td>1 kg</td>
+                                <td>R$ 58,00</td>
+                            </tr>
+                            <tr>
+                                <td>Torta de limão</td>
+                                <td>8 fatias</td>
+                                <td>R$ 65,00</td>
+                            </tr>
+                            <tr>
+                                <td>Brigadeiros gourmet</td>
+                                <td>12 unidades</td>
+                                <td>R$ 36,00</td>
+                            </tr>
+                            <tr>
+                                <td>Sobremesa no pote</td>
+                                <td>1 unidade</td>
+                                <td>R$ 9,00</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">
+                                    Encomendas com 3 dias de antecedência.
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato">
+            <div class="conteudo">
+                <h2>Fale comigo</h2>
+
+                <form action="#" method="get">
+                    <div class="campo">
+                        <label for="nome">Seu nome</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Ex.: Ana Souza"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="voce@exemplo.com"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(21) 90000-0000">
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto">
+                            <option value="encomenda">Fazer uma encomenda</option>
+                            <option value="orcamento">Pedir um orçamento</option>
+                            <option value="duvida">Tirar uma dúvida</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="campo">
+                        <legend>Como prefere que eu responda?</legend>
+
+                        <label class="opcao">
+                            <input type="radio" name="resposta" value="whatsapp" checked>
+                            WhatsApp
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="resposta" value="email">
+                            E-mail
+                        </label>
+                    </fieldset>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="5"
+                            placeholder="Conte o que você precisa e para quando."></textarea>
+                    </div>
+
+                    <button type="submit" class="botao">
+                        Enviar mensagem
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Doce da Fé. Feito com carinho pela Fernanda.</p>
+    </footer>
+
+</body>
+</html>
