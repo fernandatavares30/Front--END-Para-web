@@ -64,12 +64,12 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #8a2b57;
-    color:245 255	#98d1ff ;
+    background-color: #F2CEE9;
+    color: #4fa5ec;
 }
 
 .banner {
-    background-color: #fbe3d6;
+    background-color: #fbd6f2;
 }
 
 .banner .conteudo {
@@ -106,7 +106,7 @@ nav a:hover {
 .botao {
     display: inline-block;
     background-color: #8a2b57;
-    color: #ffffff;
+    color:#cfc4c7; 
     padding: 12px 28px;
     border-radius: 30px;
     text-decoration: none;
@@ -117,7 +117,7 @@ nav a:hover {
 }
 
 .botao:hover {
-    background-color: #5e1a3b;
+    background-color: #bd7b9b;
 }
 
 .cards {
@@ -129,7 +129,7 @@ nav a:hover {
 .card {
     flex: 1 1 250px;
     background-color: #ffffff;
-    border: 2px solid #8a2b57;
+    border: 2px solid #bd608b;
     border-radius: 12px;
     padding: 20px;
 }
@@ -140,7 +140,7 @@ nav a:hover {
 
 .card-preco {
     font-weight: bold;
-    color: #8a2b57;
+    color: #a31155;
 }
 
 /* ---------- AULA 6: tabela de preços ---------- */
@@ -151,7 +151,7 @@ nav a:hover {
 }
 
 .tabela th {
-    background-color: #8a2b57;
+    background-color: #e479ab;
     color: #ffffff;
     text-align: left;
 }
@@ -159,7 +159,7 @@ nav a:hover {
 .tabela th,
 .tabela td {
     padding: 12px;
-    border: 1px solid #8a2b57;
+    border: 1px solid #e42d82;
 }
 
 .tabela td:last-child {
@@ -167,7 +167,7 @@ nav a:hover {
 }
 
 .tabela tbody tr:hover {
-    background-color: #fbe3d6;
+    background-color: #e75d13;
 }
 
 .tabela caption {
@@ -178,12 +178,12 @@ nav a:hover {
 
 .tabela tfoot td {
     text-align: center;
-    background-color: #fbe3d6;
+    background-color: #dd230a;
     font-weight: bold;
-    color: #8a2b57;
+    color: #e2c1ce;
 }
 
-/* ---------- AULA 7: formulário ---------- */
+/* ---------- AULA 7: formulário  fale comigo ---------- */
 .campo {
     margin-bottom: 20px;
 }
@@ -204,13 +204,13 @@ legend {
     box-sizing: border-box;
     padding: 10px;
     font-size: 18px;
-    border: 2px solid #8a2b57;
+    border: 2px solid #200210;
     border-radius: 8px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 fieldset {
-    border: 2px solid #8a2b57;
+    border: 2px solid #b12c6a;
     border-radius: 8px;
     padding: 16px;
 }
@@ -233,7 +233,7 @@ button:focus {
 
 /* ---------- rodapé ---------- */
 footer {
-    background-color: #8a2b57;
+    background-color: #8f3c63;
     color: #ffffff;
     text-align: center;
     padding: 20px 24px;
