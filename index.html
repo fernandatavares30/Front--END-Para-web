@@ -1,143 +1,304 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doce da Fernanda | Bolos e doces artesanais</title>
-    <link rel="stylesheet" href="style2.css">
+    <!-- CSS do Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        /* ---------- Configurações Gerais ---------- */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: hsl(60, 2%, 12%);
+            background-color: #fff7f2;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #e467a1;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        a {
+            color: #383235;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ---------- Cabeçalho e Banner ---------- */
+        header.navbar {
+            border-bottom: 4px solid #9947c9 !important;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #F2CEE9;
+            color: #4fa5ec;
+            border-radius: 4px;
+        }
+
+        .banner {
+            background-color: #fbd6f2;
+        }
+
+        .banner h1 {
+            font-size: 44px;
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        /* ---------- Botão e Cards ---------- */
+        .botao {
+            display: inline-block;
+            background-color: #8a2b57 !important;
+            color: #cfc4c7 !important; 
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none !important;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #bd7b9b !important;
+        }
+
+        .card {
+            width: 100%;
+            background-color: #ffffff;
+            border: 2px solid #bd608b !important;
+            border-radius: 12px !important;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card-preco {
+            font-weight: bold;
+            color: #a31155;
+        }
+
+        /* ---------- Tabela de Preços Ajustada ---------- */
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            table-layout: fixed;
+        }
+
+        .tabela th {
+            background-color: #e479ab !important;
+            color: #ffffff !important;
+            text-align: left;
+        }
+
+        .tabela th,
+        .tabela td {
+            padding: 12px !important;
+            border: 1px solid #e42d82 !important;
+            word-wrap: break-word;
+        }
+
+        .tabela tbody tr:hover {
+            background-color: #f5c2cb !important;
+        }
+
+        .tabela tfoot td {
+            text-align: center;
+            background-color: #a31155 !important;
+            font-weight: bold;
+            color: #e2c1ce !important;
+        }
+
+        /* ---------- Formulário ---------- */
+        .form-control,
+        .form-select {
+            border: 2px solid #200210 !important;
+            border-radius: 8px !important;
+            padding: 10px !important;
+            font-size: 18px !important;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        fieldset {
+            border: 2px solid #b12c6a !important;
+            border-radius: 8px;
+        }
+
+        /* Foco visível */
+        a:focus,
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: 4px solid #1b4dd8 !important;
+            outline-offset: 2px;
+        }
+
+        /* ---------- Rodapé ---------- */
+        footer {
+            background-color: #8f3c63 !important;
+            color: #ffffff;
+        }
+
+        /* ---------- Ajustes Específicos para Celular ---------- */
+        @media (max-width: 576px) {
+            body {
+                font-size: 15px;
+            }
+
+            .banner h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            section {
+                padding: 28px 12px;
+            }
+
+            .tabela th,
+            .tabela td {
+                padding: 8px 6px !important;
+                font-size: 14px;
+            }
+
+            .tabela tfoot td {
+                font-size: 13px;
+                padding: 10px 6px !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header class="topo">
-        <a class="logo" href="#inicio">Doce da Fernanda</a>
+    <!-- Cabeçalho -->
+    <header class="navbar navbar-expand-lg bg-white border-bottom border-purple px-3 px-md-4 py-3 sticky-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#inicio">Doce da Fernanda</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <nav aria-label="Menu principal">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#precos">Preços</a>
-            <a href="#contato">Contato</a>
-        </nav>
+            <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#precos">Preços</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <!-- Banner principal (Seção Início) -->
-        <section id="inicio" class="banner">
-            <div class="conteudo banner-conteudo">
+        <section id="inicio" class="banner py-5">
+            <div class="container">
+                <div class="row align-items-center g-4">
 
-                <div class="banner-texto">
-                    <h1>Bolos e doces feitos à mão, com carinho e dedicação</h1>
+                    <div class="col-12 col-lg-6 banner-texto text-center text-lg-start">
+                        <h1 class="display-5 fw-bold mb-3">Bolos e doces feitos à mão, com carinho e dedicação</h1>
 
-                    <p>
-                        Encomende para o aniversário, o café da tarde
-                        ou aquele presente especial.
-                    </p>
+                        <p class="lead mb-4">
+                            Encomende para o aniversário, o café da tarde
+                            ou aquele presente especial.
+                        </p>
 
-                    <a class="botao" href="#contato">Fale comigo</a>
+                        <a class="btn btn-primary botao" href="#contato">Fale comigo</a>
+                    </div>
+
+                    <!-- Ilustração SVG -->
+                    <div class="col-12 col-lg-6 banner-imagem text-center">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 400 300"
+                            role="img"
+                            aria-labelledby="bolo-titulo bolo-descricao"
+                            class="img-fluid">
+
+                            <title id="bolo-titulo">Bolo artesanal com cereja</title>
+                            <desc id="bolo-descricao">
+                                Bolo de dois andares com cobertura de chocolate,
+                                confeitos e uma cereja, sobre um prato branco.
+                            </desc>
+
+                            <defs>
+                                <linearGradient id="massa" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#d99468"/>
+                                    <stop offset="100%" stop-color="#bd7952"/>
+                                </linearGradient>
+
+                                <linearGradient id="chocolate" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#96315f"/>
+                                    <stop offset="100%" stop-color="#76254c"/>
+                                </linearGradient>
+
+                                <radialGradient id="cereja" cx="30%" cy="25%" r="75%">
+                                    <stop offset="0%" stop-color="#ff7882"/>
+                                    <stop offset="55%" stop-color="#d6294b"/>
+                                    <stop offset="100%" stop-color="#a8193a"/>
+                                </radialGradient>
+                            </defs>
+
+                            <circle cx="85" cy="78" r="38" fill="#f4cfbc"/>
+                            <circle cx="330" cy="220" r="48" fill="#f4cfbc"/>
+
+                            <ellipse cx="200" cy="252" rx="155" ry="22" fill="#ffffff"/>
+                            <ellipse cx="200" cy="250" rx="130" ry="12" fill="#fffaf6"/>
+
+                            <rect x="96" y="158" width="208" height="90" rx="12" fill="url(#massa)"/>
+                            <rect x="91" y="151" width="218" height="19" rx="9" fill="url(#chocolate)"/>
+                            <rect x="119" y="108" width="162" height="53" rx="9" fill="#e8ae88"/>
+
+                            <path d="M119 119 Q119 106 132 106 H268 Q281 106 281 119 Q281 132 270 132 Q260 132 260 143 Q260 151 250 151 Q240 151 240 140 Q240 132 229 132 Q219 132 219 143 Q219 151 209 151 Q199 151 199 140 Q199 132 189 132 Q179 132 179 143 Q179 151 169 151 Q159 151 159 140 Q159 132 149 132 Q139 132 139 143 Q139 151 129 151 Q119 151 119 139 Z" fill="url(#chocolate)"/>
+
+                            <g stroke="#fff3e8" stroke-width="4" stroke-linecap="round">
+                                <path d="M151 116 l7 3"/>
+                                <path d="M185 115 l6 -2"/>
+                                <path d="M222 116 l7 2"/>
+                                <path d="M255 116 l6 -3"/>
+                            </g>
+
+                            <path d="M200 77 Q199 54 221 48" fill="none" stroke="#527d3c" stroke-width="4" stroke-linecap="round"/>
+                            <circle cx="200" cy="83" r="16" fill="url(#cereja)"/>
+                            <ellipse cx="195" cy="77" rx="4" ry="6" fill="#ffffff" opacity="0.65"/>
+                        </svg>
+                    </div>
+
                 </div>
-
-                <!-- Ilustração do bolo em SVG -->
-                <div class="banner-imagem">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 400 300"
-                        role="img"
-                        aria-labelledby="bolo-titulo bolo-descricao">
-
-                        <title id="bolo-titulo">Bolo artesanal com cereja</title>
-                        <desc id="bolo-descricao">
-                            Bolo de dois andares com cobertura de chocolate,
-                            confeitos e uma cereja, sobre um prato branco.
-                        </desc>
-
-                        <defs>
-                            <linearGradient id="massa" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#d99468"/>
-                                <stop offset="100%" stop-color="#bd7952"/>
-                            </linearGradient>
-
-                            <linearGradient id="chocolate" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#96315f"/>
-                                <stop offset="100%" stop-color="#76254c"/>
-                            </linearGradient>
-
-                            <radialGradient id="cereja" cx="30%" cy="25%" r="75%">
-                                <stop offset="0%" stop-color="#ff7882"/>
-                                <stop offset="55%" stop-color="#d6294b"/>
-                                <stop offset="100%" stop-color="#a8193a"/>
-                            </radialGradient>
-                        </defs>
-
-                        <!-- Formas decorativas ao fundo -->
-                        <circle cx="85" cy="78" r="38" fill="#f4cfbc"/>
-                        <circle cx="330" cy="220" r="48" fill="#f4cfbc"/>
-
-                        <!-- Prato -->
-                        <ellipse cx="200" cy="252" rx="155" ry="22" fill="#ffffff"/>
-                        <ellipse cx="200" cy="250" rx="130" ry="12" fill="#fffaf6"/>
-
-                        <!-- Base do bolo -->
-                        <rect x="96" y="158" width="208" height="90"
-                              rx="12" fill="url(#massa)"/>
-
-                        <!-- Cobertura da base -->
-                        <rect x="91" y="151" width="218" height="19"
-                              rx="9" fill="url(#chocolate)"/>
-
-                        <!-- Parte superior do bolo -->
-                        <rect x="119" y="108" width="162" height="53"
-                              rx="9" fill="#e8ae88"/>
-
-                        <!-- Cobertura superior -->
-                        <path d="M119 119 Q119 106 132 106 H268
-                                 Q281 106 281 119
-                                 Q281 132 270 132
-                                 Q260 132 260 143
-                                 Q260 151 250 151
-                                 Q240 151 240 140
-                                 Q240 132 229 132
-                                 Q219 132 219 143
-                                 Q219 151 209 151
-                                 Q199 151 199 140
-                                 Q199 132 189 132
-                                 Q179 132 179 143
-                                 Q179 151 169 151
-                                 Q159 151 159 140
-                                 Q159 132 149 132
-                                 Q139 132 139 143
-                                 Q139 151 129 151
-                                 Q119 151 119 139 Z"
-                              fill="url(#chocolate)"/>
-
-                        <!-- Confeitos -->
-                        <g stroke="#fff3e8" stroke-width="4" stroke-linecap="round">
-                            <path d="M151 116 l7 3"/>
-                            <path d="M185 115 l6 -2"/>
-                            <path d="M222 116 l7 2"/>
-                            <path d="M255 116 l6 -3"/>
-                        </g>
-
-                        <!-- Cabinho da cereja -->
-                        <path d="M200 77 Q199 54 221 48"
-                              fill="none" stroke="#527d3c"
-                              stroke-width="4" stroke-linecap="round"/>
-
-                        <!-- Cereja -->
-                        <circle cx="200" cy="83" r="16" fill="url(#cereja)"/>
-                        <ellipse cx="195" cy="77" rx="4" ry="6"
-                                 fill="#ffffff" opacity="0.65"/>
-
-                    </svg>
-                </div>
-
             </div>
         </section>
 
         <!-- Sobre -->
-        <section id="sobre">
-            <div class="conteudo">
-                <h2>Sobre mim</h2>
+        <section id="sobre" class="py-5">
+            <div class="container">
+                <h2 class="mb-3">Sobre mim</h2>
                 <p>
                     Sou a Fernanda e faço doces há dez anos. Comecei vendendo
                     para os vizinhos e hoje atendo festas e encomendas de toda
@@ -147,55 +308,67 @@
         </section>
 
         <!-- Serviços -->
-        <section id="servicos">
-            <div class="conteudo">
-                <h2>O que eu faço</h2>
+        <section id="servicos" class="py-5">
+            <div class="container">
+                <h2 class="mb-4">O que eu faço</h2>
 
-                <div class="cards">
-                    <article class="card">
-                        <h3>Bolos de aniversário</h3>
-                        <p>
-                            Massa fofinha, recheio à sua escolha e decoração
-                            no tema da festa.
-                        </p>
-                        <p class="card-preco">A partir de R$ 58,00</p>
-                    </article>
+                <div class="row g-4">
+                    <div class="col-12 col-lg-4">
+                        <article class="card h-100 p-3 shadow-sm">
+                            <div class="card-body">
+                                <h3>Bolos de aniversário</h3>
+                                <p class="card-text">
+                                    Massa fofinha, recheio à sua escolha e decoração
+                                    no tema da festa.
+                                </p>
+                                <p class="card-preco mb-0">A partir de R$ 58,00</p>
+                            </div>
+                        </article>
+                    </div>
 
-                    <article class="card">
-                        <h3>Doces para festa</h3>
-                        <p>
-                            Brigadeiros gourmet, beijinhos e cajuzinhos
-                            em caixas de 12 ou 50 unidades.
-                        </p>
-                        <p class="card-preco">A partir de R$ 36,00</p>
-                    </article>
+                    <div class="col-12 col-lg-4">
+                        <article class="card h-100 p-3 shadow-sm">
+                            <div class="card-body">
+                                <h3>Doces para festa</h3>
+                                <p class="card-text">
+                                    Brigadeiros gourmet, beijinhos e cajuzinhos
+                                    em caixas de 12 ou 50 unidades.
+                                </p>
+                                <p class="card-preco mb-0">A partir de R$ 36,00</p>
+                            </div>
+                        </article>
+                    </div>
 
-                    <article class="card">
-                        <h3>Sobremesas no pote</h3>
-                        <p>
-                            Porção individual, prática para levar.
-                            Sabores que mudam a cada semana.
-                        </p>
-                        <p class="card-preco">A partir de R$ 9,00</p>
-                    </article>
+                    <div class="col-12 col-lg-4">
+                        <article class="card h-100 p-3 shadow-sm">
+                            <div class="card-body">
+                                <h3>Sobremesas no pote</h3>
+                                <p class="card-text">
+                                    Porção individual, prática para levar.
+                                    Sabores que mudam a cada semana.
+                                </p>
+                                <p class="card-preco mb-0">A partir de R$ 9,00</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Preços -->
-        <section id="precos">
-            <div class="conteudo">
-                <h2>Tabela de preços</h2>
+        <section id="precos" class="py-5">
+            <div class="container">
+                <h2 class="mb-3">Tabela de preços</h2>
+                
+                <p class="text-muted fw-bold mb-3">Valores dos produtos mais pedidos</p>
 
-                <div class="tabela-container">
-                    <table class="tabela">
-                        <caption>Valores dos produtos mais pedidos</caption>
-
+                <div class="table-responsive">
+                    <table class="tabela table align-middle w-100 mb-0">
                         <thead>
                             <tr>
-                                <th scope="col">Produto</th>
-                                <th scope="col">Porção</th>
-                                <th scope="col">Preço</th>
+                                <th scope="col" style="width: 45%;">Produto</th>
+                                <th scope="col" style="width: 30%;">Porção</th>
+                                <th scope="col" style="width: 25%;">Preço</th>
                             </tr>
                         </thead>
 
@@ -224,7 +397,7 @@
 
                         <tfoot>
                             <tr>
-                                <td colspan="3">
+                                <td colspan="3" class="text-center fw-bold">
                                     Encomendas com 3 dias de antecedência.
                                 </td>
                             </tr>
@@ -235,73 +408,77 @@
         </section>
 
         <!-- Contato -->
-        <section id="contato">
-            <div class="conteudo">
-                <h2>Fale comigo</h2>
+        <section id="contato" class="py-5">
+            <div class="container" style="max-width: 700px;">
+                <h2 class="mb-4">Fale comigo</h2>
 
                 <form action="#" method="get">
-                    <div class="campo">
-                        <label for="nome">Seu nome</label>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label fw-bold">Seu nome</label>
                         <input
                             type="text"
                             id="nome"
                             name="nome"
+                            class="form-control"
                             placeholder="Ex.: Ana Souza"
                             required>
                     </div>
 
-                    <div class="campo">
-                        <label for="email">E-mail</label>
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold">E-mail</label>
                         <input
                             type="email"
                             id="email"
                             name="email"
+                            class="form-control"
                             placeholder="voce@exemplo.com"
                             required>
                     </div>
 
-                    <div class="campo">
-                        <label for="telefone">Telefone</label>
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label fw-bold">Telefone</label>
                         <input
                             type="tel"
                             id="telefone"
                             name="telefone"
+                            class="form-control"
                             placeholder="(21) 90000-0000">
                     </div>
 
-                    <div class="campo">
-                        <label for="assunto">Assunto</label>
-                        <select id="assunto" name="assunto">
+                    <div class="mb-3">
+                        <label for="assunto" class="form-label fw-bold">Assunto</label>
+                        <select id="assunto" name="assunto" class="form-select">
                             <option value="encomenda">Fazer uma encomenda</option>
                             <option value="orcamento">Pedir um orçamento</option>
                             <option value="duvida">Tirar uma dúvida</option>
                         </select>
                     </div>
 
-                    <fieldset class="campo">
-                        <legend>Como prefere que eu responda?</legend>
+                    <fieldset class="border p-3 rounded mb-3"> 
+                        <legend class="float-none w-auto px-2 fs-6 fw-bold">Como prefere que eu responda?</legend>
 
-                        <label class="opcao">
-                            <input type="radio" name="resposta" value="whatsapp" checked>
-                            WhatsApp
-                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="resposta" id="resp-zap" value="whatsapp" checked>
+                            <label class="form-check-label" for="resp-zap">WhatsApp</label>
+                        </div>
 
-                        <label class="opcao">
-                            <input type="radio" name="resposta" value="email">
-                            E-mail
-                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="resposta" id="resp-email" value="email">
+                            <label class="form-check-label" for="resp-email">E-mail</label>
+                        </div>
                     </fieldset>
 
-                    <div class="campo">
-                        <label for="mensagem">Mensagem</label>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label fw-bold">Mensagem</label>
                         <textarea
                             id="mensagem"
                             name="mensagem"
+                            class="form-control"
                             rows="5"
                             placeholder="Conte o que você precisa e para quando."></textarea>
                     </div>
 
-                    <button type="submit" class="botao">
+                    <button type="submit" class="btn btn-primary botao">
                         Enviar mensagem
                     </button>
                 </form>
@@ -309,9 +486,11 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Doce da Fernanda. Feito com carinho pela Fernanda.</p>
+    <footer class="text-center py-4">
+        <p class="mb-0">&copy; 2026 Doce da Fernanda. Feito com carinho pela Fernanda.</p>
     </footer>
 
+    <!-- JS do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
